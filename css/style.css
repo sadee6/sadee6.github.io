@@ -29,17 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*nav menu*/
 
-.dropbtn {
-background-color: white;
-color: black;
-padding: 16px;
-font-size: 25px;
-border: none;
-cursor: pointer;
-font-family: glory;
-}
-
-.nav-menu-container {
+.nav-menu-headings {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -48,7 +38,7 @@ font-family: glory;
 }
 
 @media (min-width: 480px) {
-  .nav-menu-container {
+  .nav-menu-headings {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -58,38 +48,23 @@ font-family: glory;
   }
 }
 
-.nav-menu-headings {
- position: relative;
- display: inline-block;
- padding: 0px 20px;
+ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  font-size: 20px;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+li {
+  padding: 5px 0px;
 }
 
-.dropdown-content a {
-	text-decoration: none;
-	padding: 12px 30px;  
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.nav-menu-headings:hover .dropdown-content {
-  display: block;
-}
-
-.nav.menu.headings:hover .dropbtn {
-  background-color:  #3e8e41;
+a {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  padding: 0px 30px;
 }
 
 /*Photo Grid*/
@@ -135,8 +110,8 @@ font-family: glory;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
+ /* opacity: 0;*/
+  transition: opacity 1s ease-in;
 }
 
 .appear-text:hover {
@@ -145,30 +120,53 @@ font-family: glory;
 
 .category-container img {
   max-width: 100%;
+  position: relative;
   /*max-height: auto;*/
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: filter 0.4s linear;
+  transition: transform 0.4s ease-in;
 }
 
 .category-container img:hover {
-  filter: brightness(50%);
+  /*filter: brightness(50%);*/
+  transform: scale(1.1);
+  z-index: 2;
 }
 
 /*touring page css*/
 
+.location-title-section {
+ height: 50px;
+ margin: 20px 40px;
+ border-radius: 4px;
+ background: rgba(123, 123, 124, 0.5);
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .blog-posts {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;  
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding: 0px 40px;  
+}
+
+.location-heading {
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;  
+  margin-left: 40px;
+  padding-top: 10px;
 }
 
 .travel-locations {
+  height: 300px;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .travel-locations img {
@@ -182,9 +180,13 @@ font-family: glory;
 .location {
   margin-left: 20px;
   flex-grow: 1;
-  test: git;
 }
 
+.blog-content {
+ height: 200px;
+ overflow: hidden;
+
+}
 
 
 
