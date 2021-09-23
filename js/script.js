@@ -1,35 +1,38 @@
 console.log("testing");
 
+  
+  
+    // <!-- Trigger toggleText() when the 
+    //     button is clicked -->
 
-const touringNavButton = document.getElementById('touring-nav-button');
 
-touringNavButton.addEventListener('click', followLink);
+function toggleText() {
+  
+var points = document.getElementById("points");
+console.log(points);
+console.log(showMoreText);
+console.log(buttonText);
 
-function followLink(){
-  sideMenu.classList.add('show-menu');
+var showMoreText = document.getElementById("moreText");
+  
+var buttonText = document.getElementById("textButton");
+  
+
+if (points.style.display === "none") {
+  
+  showMoreText.style.display = "none";
+  
+  points.style.display = "inline";
+  
+  buttonText.innerHTML = "Show More";
+            }  
+else {
+  
+showMoreText.style.display = "inline";
+  
+points.style.display = "none";
+  
+buttonText.innerHTML = "Show Less";
+  }
 }
-
-
-
-
-
-// const gridImage = document.querySelector("#grid-image")
-// console.log(gridImage);
-
-// gridImage.addEventListener("mouseover", enlargeImage);
-
-// function enlargeImage() {
-// 	// gridImage.style.height="120%";
-// 	// gridImage.style.width="120%";
-// 	// gridImage.style.position='relative';
-// 	gridImage.style.zIndex='1';
-//  }
-
-// gridImage.addEventListener("mouseleave", resetImage);
-
-// function resetImage() {
-// 	gridImage.style.height="100%";
-// 	gridImage.style.width="100%";
-// 	gridImage.style.position='relative';
-//  }
 
