@@ -1,21 +1,17 @@
-console.log("testing");
 
-var points = document.getElementById("points");
-    
-var showMoreText = document.getElementById("moreText");
+function toggleText(blogId) {
+// console.log(blogId);
 
-var buttonText = document.getElementById("textButton");
-
+var parentContainer = event.target.closest(".travel-locations");
+// console.log(parentContainer);
+var points = parentContainer.querySelector("#points");
+// console.log(points);
+var showMoreText = parentContainer.querySelector("#moreText");
+// console.log(showMoreText);
+var buttonText = parentContainer.querySelector("#textButton");
+// console.log(buttonText);
 
 buttonText.addEventListener("onclick", toggleText);
-
-function toggleText(blogId, spanClass) {
-  console.log(document.getElementsByClassName(spanClass)[0]);
-  console.log(document.getElementById(blogId));
-  console.log(blogId, spanClass);
-
-var showMoreText = document.getElementsByClassName(spanClass)[0];
-var buttonText = document.getElementById(blogId);
 
 if (points.style.display === "none") {
 
@@ -35,3 +31,5 @@ else {
   buttonText.innerHTML = "Show Less";
   }
 }
+
+
