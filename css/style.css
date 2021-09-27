@@ -25,7 +25,7 @@ html {
 .fixed-header {
   background: white;
   width: 100%;
-  height: 295px;
+  height: 300px;
   position: fixed;
   top: 0px;
   z-index: 99;
@@ -151,7 +151,7 @@ a {
   transition: transform 0.4s ease-in;
 }
 
-/*Touring Page css*/
+/*TOURING PAGE CSS*/
 /*Main Location Headings*/
 .location-title-section {
  height: 70px;
